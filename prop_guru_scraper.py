@@ -7,7 +7,6 @@ logging.basicConfig(level=logging.DEBUG)
 log = logging.getLogger(__name__)
 
 
-# change page number
 URL = "https://www.propertyguru.com.sg/property-for-rent/1?_freetextDisplay=yishun&freetext=yishun"
 results = []
 
@@ -17,13 +16,6 @@ with sync_playwright() as playwright:
     page = agentql.wrap(browser.new_page())
     page.goto(URL)
 
-    QUERY = """
-    {
-        captcha_form {
-            Verify_you_are_human_checkbox
-        }
-    }
-    """
 
     LISTING_QUERY = """
     {
@@ -36,16 +28,8 @@ with sync_playwright() as playwright:
         }
     }
     """
-    # range = (next page, last page)
+ 
     for x in range(2, 25):
-        # Use query_elements() method to fetch the cookies dialog button from the page
-        page.wait_for_page_ready_state()
-        response = page.query_elements(QUERY)
-
-        # Check if there is a cookie-rejection button on the page
-        if response.captcha_form.Verify_you_are_human_checkbox != None:
-            # If so, click the close button to reject cookies
-            response.captcha_form.Verify_you_are_human_checkbox.click()
 
         # Scroll down the page to load
         for _ in range(16):
