@@ -1,5 +1,5 @@
 # Webscraper_Project
-Building a webscraper using Playwright and AgentQL.
+Building a webscraper using Playwright and AgentQL. <br>
 [Disclaimer: This project still a work in progress as it won't work if encounter bot detection.]
 
 ## Playwright
