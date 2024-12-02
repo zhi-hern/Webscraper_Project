@@ -1,4 +1,4 @@
-# Webscraper_Project
+# Webscraper_Project (Work in Progress)
 Building a webscraper using Playwright and AgentQL. <br>
 
 **[Disclaimer: This project is still a work in progress as it won't work if encounter bot detection.]**
