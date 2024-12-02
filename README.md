@@ -1,5 +1,6 @@
 # Webscraper_Project
-Building a webscraper using playwright and agentql.
+Building a webscraper using Playwright and AgentQL.
+[Disclaimer: This project still a work in progress as it won't work if encounter bot detection.]
 
 ## Playwright
 - Playwright is an open-source automation library for browser testing and web scraping.
